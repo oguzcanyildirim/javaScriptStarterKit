@@ -46,7 +46,7 @@ let product3 = {productName:"Elma", unitPrice:10, quantity:5}
 
 product2 = product3
 product2.productName = "Karpuz"
-console.log(product3.productName)
+console.log(product3.productName) //logs Karpuz
 
 //numbers are passed by value
 
@@ -54,4 +54,27 @@ let num1 = 3
 let num2 = 10
 num1 = num2
 num2 = 15
-console.log("num1: " + num1)
+console.log("num1: " + num1) // logs 10
+
+//array of objects as param into the function
+function addToCart4(products) {
+    console.log(products)
+}
+
+let currProducts = [
+    {productName:"Elma", unitPrice:10, quantity:8},
+    {productName:"Armut", unitPrice:15, quantity:1},
+    {productName:"Karpuz", unitPrice:4, quantity:2}
+]
+
+//sends the ref of the currProducts to the addtocart4 function
+addToCart4(currProducts)
+
+//the parameters are sent like an array like structure when this notation is used
+function add(...numbers) {
+    console.log(numbers)
+}
+
+add(20, 30)
+add(20, 30, 40)
+add(20, 30, 40, 50)

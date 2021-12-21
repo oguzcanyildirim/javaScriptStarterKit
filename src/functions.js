@@ -39,3 +39,19 @@ function addToCart3(product) {
 
 let product1 = {productName:"Elma", unitPrice:10, quantity:5}
 addToCart3(product1)
+
+// objects are passed by reference in js
+let product2 = {productName:"Elma", unitPrice:10, quantity:5}
+let product3 = {productName:"Elma", unitPrice:10, quantity:5}
+
+product2 = product3
+product2.productName = "Karpuz"
+console.log(product3.productName)
+
+//numbers are passed by value
+
+let num1 = 3
+let num2 = 10
+num1 = num2
+num2 = 15
+console.log("num1: " + num1)

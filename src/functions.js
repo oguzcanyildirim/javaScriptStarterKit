@@ -70,7 +70,7 @@ let currProducts = [
 //sends the ref of the currProducts to the addtocart4 function
 addToCart4(currProducts)
 
-//the parameters are sent like an array like structure when this notation is used
+//the parameters are sent like an array like structure when this rest notation is used
 function add(...numbers) {
     console.log(numbers)
 }
